@@ -1,5 +1,5 @@
 import React from 'react';
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 
 function Food({name, image, key, rating}){
@@ -12,7 +12,11 @@ function Food({name, image, key, rating}){
 
 }
 
-
+Food.propTypes= {
+	name: PropTypes.string.isRequired,
+	image: PropTypes.string.isRequired,
+	rating: PropTypes.number.isRequired
+};
 const foodILike = [
   {id: 1,
     name: "Kimchi",
